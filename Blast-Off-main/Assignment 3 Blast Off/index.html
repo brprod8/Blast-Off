@@ -1,0 +1,102 @@
+<!--Start with the doc type tag which will tell the browser what type of doc and version of HTML-->
+<!DOCTYPE html>
+<!--Alwasy need html top and bottom-->
+<html>
+<!--The head tag holds usually non display items. -->
+    <head>
+        <!--What you see on the tab-->
+        <title>UAT MISSION CONTROL</title>
+    </head>
+    <!--google fonts-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!--Makes it look fancy/ boarder are tricky though-->
+<style>
+   
+    #timerCountDown {
+        text-align: center;
+        padding: 4px;
+        font-size: 2em;
+        width: 150px;
+        color: rgb(148, 32, 158);
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+    }
+    body{
+        background-image: url(space.png)
+        
+    }
+    
+</style>
+
+<body>
+    <!--Groups certain things together-->
+    <div class="container mt-3">
+        <h4>Celebrate U.S.A</h4>
+<!--words that are not a header-->
+        <p id="timerCountDown" class="lead">
+            Start
+        </p>
+      
+    </div>
+
+<!--allows the functions to actualy work-->
+    <script>
+        const timerElement = document.getElementById('timerCountDown');
+        let timer;
+
+        function startTimeCountDown() {
+            timer = 50;
+            const timeCountdown = setInterval(countdown, 1000);
+        }
+
+
+        function countdown() {
+            if (timer == 0) {
+                clearTimeout(timer);
+                timerElement.innerHTML = 'BLAST OFF!'
+
+            } else {
+                timerElement.innerHTML = timer + ' secs';
+                timer--;
+            }
+        }
+
+        timerElement.addEventListener('click', ev => {
+            startTimeCountDown();
+        });
+    </script>
+    <style>
+        h4{
+            text-align: justify;
+            color: blueviolet;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</body>
+<head>
+    <body>
+    <style>
+        h1 {
+            text-align: center;
+            color:aliceblue
+            
+        }
+        p {
+            text-align: center;
+            color:aliceblue;
+            font-size: xx-large;
+        }
+    </style>
+    </head>
+    <body>
+    
+    <h1>UAT MISSION CONTROL</h1>
+    
+    <p>Hello World! We interupt your electronic devices for breaking news. This is your president speaking. We have just been informed by NASA that are Artemis-1 mission is good to go to the moon. Press the count down button and celebrate this joyous day as this is a big step for human kind!  </p>
+<body>
+
+</html>
